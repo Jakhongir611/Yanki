@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+}
+
+.wrap {
+  height: 100vh;
+  background-image: url(../img/yanki_img.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0px auto;
+  padding: 24px 0px 74px 0px;
+}
+
+.header {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.header-left a {
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  outline: none;
+  transition: 100ms;
+}
+.header-left a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+.header-left .burger-menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  margin-right: 104px;
+  cursor: pointer;
+}
+.header-left .burger-menu span {
+  width: 34px;
+  height: 4px;
+  background-color: white;
+}
+.header-left form {
+  display: none;
+}
+.header-left form select {
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  border: 0px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: 100ms;
+}
+.header-left form select:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+.header-left form select option {
+  color: rgba(37, 37, 37, 0.5);
+}
+.header-center {
+  color: white;
+  font-weight: 400;
+  font-size: 40px;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+}
+.header-right form {
+  display: flex;
+  align-items: center;
+}
+.header-right form select {
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  border: 0px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: 100ms;
+}
+.header-right form select:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+.header-right form select option {
+  color: rgba(37, 37, 37, 0.5);
+}
+.header-right form select:nth-child(2) {
+  margin-left: 24px;
+  margin-right: 50px;
+}
+.header-right form button {
+  display: flex;
+  align-items: center;
+  border: 0px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 30px;
+  outline: none;
+}
+
+.wrap-title {
+  width: 100%;
+  height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap-title-text {
+  width: 374px;
+  height: 114px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.wrap-title-text p {
+  color: white;
+  font-weight: 300;
+  font-size: 46px;
+  line-height: 54px;
+  opacity: 0.85;
+}
+.wrap-title-text hr {
+  width: 120px;
+  opacity: 0.85;
+}
+.wrap-title-text a {
+  color: white;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  transition: 100ms;
+}
+.wrap-title-text a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.wrap-center {
+  width: 100%;
+  margin-top: 100px;
+}
+.wrap-center p {
+  color: #252525;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 50px;
+}
+.wrap-center .wrap-rectangles {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 450px;
+  gap: 15px;
+}
+.wrap-center .wrap-rectangles .rectangle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.wrap-center .wrap-rectangles .rectangle:nth-child(1) {
+  background-image: url(../img/rectangle_1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.wrap-center .wrap-rectangles .rectangle:nth-child(2) {
+  background-image: url(../img/rectangle_2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.wrap-center .wrap-rectangles .rectangle:nth-child(3) {
+  background-image: url(../img/rectangle_3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.wrap-center .wrap-rectangles .rectangle:nth-child(4) {
+  background-image: url(../img/rectangle_4.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.wrap-center .wrap-rectangles .small-rectangle {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(224, 190, 162, 0.75);
+  padding: 9px 0px;
+}
+.wrap-center .wrap-rectangles .small-rectangle p {
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.wrap-subscription {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap-subscription p {
+  color: #252525;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+}
+.wrap-subscription input {
+  width: 600px;
+  height: 50px;
+  margin-top: 50px;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #252525;
+  border: 1px solid rgba(37, 37, 37, 0.5);
+  outline: none;
+}
+.wrap-subscription button {
+  width: 600px;
+  height: 50px;
+  margin-top: 20px;
+  color: white;
+  background-color: #E0BEA2;
+  border: 0px;
+  transition: 300ms;
+}
+.wrap-subscription button:hover {
+  background-color: #dc9c67;
+}
+.wrap-subscription span {
+  color: #252525;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.wrap-links {
+  width: 100%;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 120px;
+  gap: 15px;
+}
+.wrap-links p {
+  color: #252525;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 10px;
+}
+.wrap-links a {
+  color: #252525;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+  transition: 150ms;
+}
+.wrap-links a:hover {
+  color: #dc9c67;
+}
+.wrap-links .item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #252525;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 992px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 767px;
+  }
+  .wrap {
+    background-image: url(../img/yanki_adaptation.jpg);
+  }
+  .wrap-center .wrap-rectangles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header-left a {
+    display: none;
+  }
+  .header-right form select {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 565px;
+  }
+  .header {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .header-right form button {
+    margin-left: 15px;
+  }
+  .header .header-right form button:nth-child(3) {
+    display: none;
+  }
+  .header .header-right form button:nth-child(4) {
+    display: none;
+  }
+  .header .wrap-center {
+    margin-top: 50px;
+  }
+  .header .wrap-center p {
+    margin-bottom: 25px;
+  }
+  .header .wrap-subscription {
+    margin-top: 50px;
+  }
+  .header .wrap-subscription input {
+    margin-top: 25px;
+    width: 300px;
+  }
+  .header .wrap-subscription button {
+    width: 300px;
+  }
+  .header .wrap-links {
+    margin-top: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 0px;
+  }
+}
+@media (max-width: 767px) and (max-width: 565px) {
+  .container {
+    max-width: 350px;
+  }
+  .header-left .burger-menu {
+    margin-right: 0px;
+  }
+  .header-left .burger-menu span:nth-child(2) {
+    width: 26px;
+  }
+  .header-left .burger-menu span:nth-child(3) {
+    width: 18px;
+  }
+  .header-left form {
+    display: flex;
+    align-items: center;
+  }
+  .header-center {
+    font-size: 36px;
+  }
+  .wrap-title-text p {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .wrap-title-text a {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .wrap-center {
+    margin-top: 25px;
+  }
+  .wrap-subscription {
+    margin-top: 25px;
+  }
+  .wrap-subscription input {
+    width: 335px;
+  }
+  .wrap-subscription button {
+    width: 335px;
+  }
+  .wrap-links {
+    margin-top: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 0px;
+  }
+}/*# sourceMappingURL=style.min.css.map */

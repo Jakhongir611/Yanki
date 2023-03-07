@@ -1,0 +1,135 @@
+@media (max-width: 1200px) {
+    .container {
+        max-width: 992px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 767px;
+    }
+
+    .wrap {
+        background-image: url(../img/yanki_adaptation.jpg);
+    }
+
+    .wrap-center .wrap-rectangles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-left a {
+        display: none;
+    }
+
+    .header-right form select {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 565px;
+    }
+
+    .header-right form button {
+        margin-left: 15px;
+    }
+
+    .header-right form button:nth-child(3) {
+        display: none;
+    }
+
+    .header-right form button:nth-child(4) {
+        display: none;
+    }
+
+    .wrap-center {
+        margin-top: 50px;
+    }
+
+    .wrap-center p {
+        margin-bottom: 25px;
+    }
+
+    .wrap-subscription {
+        margin-top: 50px;
+    }
+
+    .wrap-subscription input {
+        margin-top: 25px;
+    }
+
+    .wrap-subscription input {
+        width: 300px;
+    }
+
+    .wrap-subscription button {
+        width: 300px;
+    }
+
+    .wrap-links {
+        margin-top: 50px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 0px;
+    }
+}
+
+@media (max-width: 565px) {
+    .container {
+        max-width: 350px;
+
+    }
+
+    .header-left .burger-menu {
+        margin-right: 0px;
+    }
+
+    .header-left .burger-menu span:nth-child(2) {
+        width: 26px;
+    }
+
+    .header-left .burger-menu span:nth-child(3) {
+        width: 18px;
+    }
+
+    .header-left form {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-center {
+        font-size: 36px;
+    }
+
+    .wrap-title-text p {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .wrap-title-text a {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .wrap-center {
+        margin-top: 25px;
+    }
+
+    .wrap-subscription {
+        margin-top: 25px;
+    }
+
+    .wrap-subscription input {
+        width: 335px;
+    }
+
+    .wrap-subscription button {
+        width: 335px;
+    }
+
+    .wrap-links {
+        margin-top: 25px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 0px;
+    }
+}
