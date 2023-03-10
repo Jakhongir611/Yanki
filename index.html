@@ -6,18 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./aos/aos.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
 <body>
     <div class="wrap">
         <div class="container">
+            <div class="active-menu">
+                <a href="#">Аккаунт</a>
+                <a href="#">Избранное</a>
+                <a href="#">Корзина</a>
+                <a href="#">Оплата</a>
+                <a href="#">Тема</a>
+                <a href="#">Настройки</a>
+                <a href="#">О нас</a>
+            </div>
             <header class="header">
                 <div class="header-left">
                     <div class="burger-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span class="top-line"></span>
+                        <span class="center-line"></span>
+                        <span class="bottom-line"></span>
                     </div>
                     <a href="#">NEW</a>
                     <a href="#">КАТАЛОГ</a>
@@ -27,7 +38,7 @@
                             <option>RU</option>
                             <option>EN</option>
                             <option>GE</option>
-                            <option>CH</option>
+                            <option>UZ</option>
                         </select>
                     </form>
                 </div>
@@ -40,13 +51,13 @@
                             <option>RU</option>
                             <option>EN</option>
                             <option>GE</option>
-                            <option>CH</option>
+                            <option>UZ</option>
                         </select>
                         <select>
                             <option>USD</option>
                             <option>UZS</option>
                             <option>EUR</option>
-                            <option>GBP</option>
+                            <option>RUB</option>
                         </select>
                         <button><img src="./img/search_icon.png" width="25px" height="25px"></button>
                         <button><img src="./img/contact_icon.png" width="25px" height="25px"></button>
@@ -89,13 +100,40 @@
                     </div>
                 </div>
             </div>
+            <div class="wrap-center-mobile">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="small-rectangle">
+                                <p>Куртки</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="small-rectangle">
+                                <p>Пальто</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="small-rectangle">
+                                <p>Шубы</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="small-rectangle">
+                                <p>Парки</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
             <div class="wrap-subscription">
                 <p>Узнайте первым о новинках</p>
-                <input type="email" placeholder="Ваш e-mail">
+                <input type="email" placeholder="Ваш e-mail" title="Введите свой e-mail адрес чтобы подписаться">
                 <form>
                     <button>ПОДПИСАТЬСЯ</button>
                 </form>
-                <span>Нажимая на кнопку «Подписаться», я соглашаюсь на обработку моих<br>персональных данных и
+                <span data-aos="zoom-in" data-aos-duration="1000">Нажимая на кнопку «Подписаться», я соглашаюсь на обработку моих<br>персональных данных и
                     ознакомлен(а) с условиями конфиденциальности.
                 </span>
             </div>
@@ -122,9 +160,40 @@
                     <a href="#">+38 (073) 096 36 44</a>
                     <a href="#">info@yanki.com</a>
                 </div>
+                <form>
+                    <select>
+                        <option><p>КОМПАНИЯ</p></option>
+                        <option><a href="#">О нас</a></option>
+                        <option><a href="#">Контакты</a></option>
+                    </select>
+                    <select>
+                        <option><p>ПОЛЕЗНОЕ</p></option>
+                        <option><a href="#">Оплата и доставка</a></option>
+                        <option><a href="#">Условия возврата</a></option>
+                        <option><a href="#">Бонусная система</a></option>
+                    </select>
+                    <select>
+                        <option><p>ПОКУПАТЕЛЮ</p></option>
+                        <option><a href="#">Избранное</a></option>
+                        <option><a href="#">Публичная оферта</a></option>
+                        <option><a href="#">Политика конфиденйиальности</a></option>
+                    </select>
+                </form>
+            </div>
+            <div class="contact">
+                <p>КОНТАКТЫ</p>
+                <div class="web">
+                    <img src="./img/instagram.png" alt="">
+                    <img src="./img/telegram.png" alt="">
+                </div>
+                <p>+38(073) 096 36 44</p>
+                <a href="#">info@yanki.com</a>
+                <span>©️ 2021 Yanki. All rights reserved</span>
             </div>
         </div>
     </div>
+    <script src="./aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

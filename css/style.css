@@ -5,6 +5,10 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .wrap {
@@ -18,6 +22,73 @@
   max-width: 1140px;
   margin: 0px auto;
   padding: 24px 0px 74px 0px;
+  position: relative;
+}
+
+.active-menu {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  justify-content: center;
+  gap: 20px;
+  background-color: white;
+  align-items: center;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.47);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  transition: 200ms;
+  z-index: 10;
+}
+.active-menu a {
+  color: white;
+}
+
+.burger-menu {
+  height: 100%;
+  position: relative;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 104px;
+  background-color: transparent;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 20;
+}
+.burger-menu span {
+  width: 34px;
+  height: 4px;
+  background-color: white;
+  transition: 500ms;
+}
+
+.active {
+  top: 0;
+}
+
+.fix {
+  position: fixed;
+}
+
+.rotate-top {
+  transform: rotate(-135deg);
+}
+
+.delete-center {
+  display: none;
+}
+
+.rotate-bottom {
+  transform: rotate(135deg);
+  margin-top: -10px;
 }
 
 .header {
@@ -43,20 +114,6 @@
 }
 .header-left a:hover {
   color: rgba(255, 255, 255, 0.75);
-}
-.header-left .burger-menu {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 6px;
-  margin-right: 104px;
-  cursor: pointer;
-}
-.header-left .burger-menu span {
-  width: 34px;
-  height: 4px;
-  background-color: white;
 }
 .header-left form {
   display: none;
@@ -255,6 +312,7 @@
   background-color: #E0BEA2;
   border: 0px;
   transition: 300ms;
+  cursor: pointer;
 }
 .wrap-subscription button:hover {
   background-color: #dc9c67;
@@ -266,6 +324,10 @@
   line-height: 19px;
   text-align: center;
   margin-top: 20px;
+}
+
+.contact {
+  display: none;
 }
 
 .wrap-links {
@@ -299,15 +361,92 @@
   gap: 10px;
   color: #252525;
 }
+.wrap-links form {
+  display: none;
+}
+
+.wrap-center-mobile {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0px auto;
+  padding: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 300px;
+  height: 450px;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide:nth-child(1) {
+  background-image: url(../img/rectangle_1.jpg);
+}
+
+.swiper-slide:nth-child(2) {
+  background-image: url(../img/rectangle_2.jpg);
+}
+
+.swiper-slide:nth-child(3) {
+  background-image: url(../img/rectangle_3.jpg);
+}
+
+.swiper-slide:nth-child(4) {
+  background-image: url(../img/rectangle_4.jpg);
+}
+
+.small-rectangle {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(224, 190, 162, 0.75);
+  padding: 9px 0px;
+}
+.small-rectangle p {
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+}
 
 @media (max-width: 1200px) {
   .container {
     max-width: 992px;
   }
+  .active-menu {
+    height: 85px;
+    font-size: 16px;
+    font-weight: 400;
+    gap: 10px;
+  }
 }
-@media (max-width: 992px) {
+@media (max-width: 1042px) {
   .container {
     max-width: 767px;
+  }
+  .active-menu {
+    height: 85px;
+    font-size: 16px;
+    font-weight: 400;
+    gap: 10px;
   }
   .wrap {
     background-image: url(../img/yanki_adaptation.jpg);
@@ -322,9 +461,18 @@
     display: none;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 817px) {
   .container {
     max-width: 565px;
+  }
+  .active-menu {
+    height: 90px;
+    font-size: 16px;
+    font-weight: 400;
+    gap: 10px;
+  }
+  .burger-menu {
+    margin-right: 10px;
   }
   .header {
     width: 100%;
@@ -332,6 +480,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  .header .header-left {
+    gap: 15px;
+  }
+  .header .header-left form {
+    display: flex;
   }
   .header .header-right form button {
     margin-left: 15px;
@@ -364,22 +518,39 @@
     gap: 30px 0px;
   }
 }
-@media (max-width: 767px) and (max-width: 565px) {
+@media (max-width: 615px) {
   .container {
-    max-width: 350px;
+    max-width: 615px;
+    overflow: hidden;
+    padding: 24px 0px 5px 0px;
   }
-  .header-left .burger-menu {
-    margin-right: 0px;
+  .active-menu {
+    width: 100%;
+    height: 90px;
+    padding: 25px 45px;
+    font-size: 14px;
+    font-weight: 400;
+    gap: 8px;
+    flex-wrap: wrap;
   }
-  .header-left .burger-menu span:nth-child(2) {
-    width: 26px;
-  }
-  .header-left .burger-menu span:nth-child(3) {
-    width: 18px;
+  .header {
+    width: 100%;
+    padding: 0px 15px;
   }
   .header-left form {
-    display: flex;
-    align-items: center;
+    display: none;
+  }
+  .header-left form select {
+    display: none;
+  }
+  .header-left .burger-menu {
+    margin-right: 25px;
+  }
+  .header-left .burger-menu span:nth-child(2) {
+    width: 34px;
+  }
+  .header-left .burger-menu span:nth-child(3) {
+    width: 34px;
   }
   .header-center {
     font-size: 36px;
@@ -393,20 +564,80 @@
     line-height: 16px;
   }
   .wrap-center {
-    margin-top: 25px;
+    display: none;
   }
   .wrap-subscription {
     margin-top: 25px;
   }
   .wrap-subscription input {
-    width: 335px;
+    width: 300px;
   }
   .wrap-subscription button {
-    width: 335px;
+    width: 300px;
   }
   .wrap-links {
     margin-top: 25px;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px 0px;
+    gap: 75px 0px;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
   }
-}/*# sourceMappingURL=style.min.css.map */
+  .wrap-links .item {
+    display: none;
+  }
+  .wrap-links form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  .wrap-links form select {
+    color: white;
+    font-weight: 300;
+    height: 50px;
+    font-size: 18px;
+    line-height: 21px;
+    border: 0px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: 100ms;
+    color: #252525;
+    border-bottom: 1px solid #252525;
+  }
+  .wrap-links form select:hover {
+    color: rgba(0, 0, 0, 0.75);
+  }
+  .wrap-links form select option {
+    color: #252525;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    color: #252525;
+    gap: 10px;
+  }
+  .contact a {
+    color: #252525;
+  }
+  .contact .web {
+    display: flex;
+    gap: 10px;
+    margin: 12px auto 7px;
+  }
+  .contact span {
+    margin-top: 30px;
+  }
+  .wrap-center-mobile {
+    display: flex;
+    margin-top: 25px;
+  }
+}
