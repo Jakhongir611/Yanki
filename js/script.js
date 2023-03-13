@@ -35,7 +35,6 @@ let href3 = doc.querySelector('#contacts')
 let href4 = doc.querySelector('#onas')
 
 
-// Это можно было сделать через css
 yakar1.addEventListener('click',(event) => {
     event.preventDefault()
     window.scrollTo({top: href1.offsetTop - 150, behavior: 'smooth'})
